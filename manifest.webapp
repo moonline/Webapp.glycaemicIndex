@@ -4,11 +4,9 @@
     "description": "List von Nahrungsmitteln und ihrem glykämischen Index",
     "launch_path": "/index.html",
     "icons": {
-        "16": "/resources/images/app-icon-16.svg",
-        "32": "/resources/images/app-icon-32.svg",
-        "64": "/resources/images/app-icon-64.svg",
-        "128": "/resources/images/app-icon-64.svg",
-        "256": "/resources/images/app-icon-64.svg"
+        "16": "/resources/images/app-icon-16.png",
+        "32": "/resources/images/app-icon-32.png",
+        "128": "/resources/images/app-icon-128.png"
     },
     "developer": {
         "name": "moonline",
