@@ -1,0 +1,18 @@
+/**
+ * FxOS Style guide rules
+ * https://www.mozilla.org/en-US/styleguide/products/firefox-os/typeface/
+ */
+h1      { font-size: 2.5rem; font-weight: normal; }
+h2      { font-size: 1.6rem; font-weight: normal; }
+p       { font-size: 1.9rem; font-weight: normal; line-height: 2.5rem; }
+p.large { font-wize: 2.3rem; font-weight: 300; line-height: 3rem; }
+p.alt   { font-size: 1.7rem; font-weight: 55; line-height: 2.2rem; }
+p.small { font-size: 1.5rem; font-weight: normal; }
+p.mini  { font-size: 1.4rem; font-weight: normal; }
+p.micro { font-size: 1.3rem; font-weight: normal; }
+ul, ol, li, input, select, textarea, label, button, button > span {
+    list-style: none;
+    font-size: 1.9rem;
+    font-weight: normal;
+    line-height: 2.5rem;
+}

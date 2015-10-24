@@ -1,0 +1,83 @@
+* { box-sizing: border-box; }
+
+body { font-family: Arial, Verdana, sans-serif; }
+
+
+/**
+ * container
+ */
+header {
+    padding: 0.5rem;
+    width: 100%;
+    position: fixed;
+    background: teal;
+    background: linear-gradient(teal, rgb(0,100,100));
+}
+.main {
+    padding: 0.5rem;
+    padding-top: 9.5rem;
+}
+.main .filterBar {
+    padding: 0.5rem 0;
+}
+
+
+/**
+ * font
+ */
+h1 {
+    color: white;
+    font-weight: bold;
+}
+h2 {
+    margin-top: 1.5rem;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+p {
+    margin: 0.5rem 0;
+}
+strong {
+    font-weight: bold;
+}
+h1, h2, h3, h4, p, span, li {
+    word-wrap: break-word;
+}
+
+/**
+ * lists
+ */
+ul > li {
+    padding: 0.25rem;
+}
+
+ul > li > .index {
+    display: inline-block;
+    border-radius: 2rem;
+    padding: 0.25rem 0.75rem;
+}
+li[data-category="low"] span.index {
+    background: seagreen;
+    color: white;
+}
+li[data-category="medium"] span.index {
+    background: orange;
+    color: black;
+}
+li[data-category="high"] span.index {
+    background: maroon;
+    color: white;
+}
+
+/**
+ * form
+ */
+input.filter {
+    width: 100%;
+    background: white;
+    background: linear-gradient(rgb(245,245,245), white);
+    border-radius: 0.1rem;
+    border: none;
+    margin-top: 0.5rem;
+    padding: 0.25rem;
+}

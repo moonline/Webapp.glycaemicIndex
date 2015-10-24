@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Glykämischer Index</title>
+        <meta charset="utf-8" />
+
+        <link rel="icon" type="image/svg"  href="./resources/images/app-icon-32.svg">
+
+        <link rel="stylesheet" type="text/css" href="./resources/styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="./resources/styles/fxos/font.css">
+
+        <link rel="stylesheet" type="text/css" href="./resources/styles/appStyle.css">
+
+        <script src="./frameworks/angularjs/angular.min.js"></script>
+
+        <script src="./repository/foodsRepository.js"></script>
+        <script src="./controller/listController.js"></script>
+        <script src="./module/foodsModule.js"></script>
+        <script src="./main.js"></script>
+    </head>
+    <body>
+        <div class="appContainer" data-ng-app="FoodsModule">
+            <header>
+                <h1>Glykämischer Index</h1>
+                <input class="filter" type="text" data-ng-model="filterText" />
+            </header>
+            <div class="main" data-ng-controller="ListController as context">
+                <ul>
+                    <li data-ng-repeat="food in context.foods | filter: filterText"
+                        data-category="{{ (food.gi <= 25) ? 'low' : ((food.gi > 50) ? 'high' : 'medium') }}">
+                        <span class="index"  data-ng-bind="food.gi"></span>
+                        <span class="food" data-ng-bind="food.name"></span>
+                    </li>
+                </ul>
+                
+                <h2>Legende</h2>
+                <p>
+                    <strong>*</strong>
+                    Obwohl diese Nahrungsmittel einen hohen GI haben,
+                    haben sie einen sehr schwachen Gehalt an reiner Glucose (ungefähr 5%).
+                    Werden sie in normalen Mengen verzehrt,
+                    dürften sie nur eine zu vernachlässigende Wirkung auf die Glykämie haben.
+                </p>
+                <p>
+                    <strong>**</strong>
+                    Es besteht praktisch kein Unterschied zwischen dem GI von Vollmilchprodukten
+                    und Milchprodukten mit einem Fettgehalt von 0%. Man sollte jedoch wissen,
+                    dass der Insulinindex von Milchprodukten hoch ist,
+                    obwohl sie einen niedrigen GI aufweisen.
+                </p>
+                <p>
+                    <strong>***</strong>
+                        Diese Nahrungsmittel enthalten so gut wie keine Kohlenhydrate und haben daher einen GI von 0.
+                </p>
+                <p>
+                    <strong>Quelle</strong> <a href="http://www.montignac.com/de/glykamischer-index/" target="_blank">
+                        http://www.montignac.com/de/glykamischer-index/
+                    </a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
